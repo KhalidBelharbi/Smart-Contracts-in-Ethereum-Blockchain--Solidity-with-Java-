@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="414.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ethereum.interfaceXMLController">
+   <children>
+      <ImageView fitHeight="347.0" fitWidth="549.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/background.png" />
+         </image>
+      </ImageView>
+      <TabPane prefHeight="315.0" prefWidth="483.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add documents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="559.0">
+                     <children>
+                        <TextField fx:id="pathField" alignment="CENTER" layoutX="72.0" layoutY="64.0" prefHeight="25.0" prefWidth="382.0" promptText="Path of your pdf file" />
+                        <Button layoutX="71.0" layoutY="249.0" mnemonicParsing="false" onAction="#importPdf" prefHeight="25.0" prefWidth="97.0" text="Add PDF file" />
+                        <TextField fx:id="signField" alignment="CENTER" layoutX="71.0" layoutY="119.0" prefHeight="25.0" prefWidth="384.0" promptText="The signature of your file" />
+                        <Button layoutX="214.0" layoutY="249.0" mnemonicParsing="false" onAction="#signPdf" prefHeight="25.0" prefWidth="97.0" text="Sign file" />
+                        <TextField fx:id="timestampField" alignment="CENTER" layoutX="71.0" layoutY="170.0" prefHeight="25.0" prefWidth="384.0" promptText="The timestamp of adding in blockchain" />
+                        <Button layoutX="358.0" layoutY="249.0" mnemonicParsing="false" onAction="#getSignature" prefHeight="25.0" prefWidth="95.0" text="Add to BC" />
+                        <Separator layoutX="163.0" layoutY="216.0" prefWidth="200.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Delete Documents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="signDeleteField" alignment="CENTER" layoutX="55.0" layoutY="20.0" prefHeight="25.0" prefWidth="418.0" promptText="The signature of your document" />
+                        <Button layoutX="200.0" layoutY="60.0" mnemonicParsing="false" onAction="#deletDoc" text="Delete my document" />
+                        <Separator layoutX="483.0" layoutY="72.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Pane layoutX="505.0" layoutY="45.0" prefHeight="269.0" prefWidth="200.0" />
+                        <Label fx:id="deletedLabel" layoutX="248.0" layoutY="217.0" />
+                        <TextArea fx:id="txtArea" layoutX="53.0" layoutY="102.0" prefHeight="176.0" prefWidth="421.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Verify documents">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="hashToVerifiedField" alignment="CENTER" layoutX="58.0" layoutY="14.0" prefHeight="25.0" prefWidth="421.0" promptText="Hash of your document" />
+                        <TextField fx:id="ownerField" alignment="CENTER" layoutX="58.0" layoutY="54.0" prefHeight="25.0" prefWidth="421.0" promptText="Adresse of the owner" />
+                        <Button layoutX="223.0" layoutY="91.0" mnemonicParsing="false" onAction="#verifyForMyAdress" text="Verify any file" />
+                        <TextArea fx:id="rrF" layoutX="58.0" layoutY="126.0" prefHeight="147.0" prefWidth="421.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TextField fx:id="newPkField" layoutX="118.0" layoutY="352.0" onAction="#changementAdresse" prefHeight="25.0" prefWidth="389.0" />
+      <TextField fx:id="newScField" layoutX="118.0" layoutY="384.0" onAction="#changementSCadress" prefHeight="25.0" prefWidth="389.0" />
+      <Label layoutX="8.0" layoutY="356.0" text="Get this private key" />
+      <Label layoutX="20.0" layoutY="388.0" text="Smart contract" />
+   </children>
+</AnchorPane>

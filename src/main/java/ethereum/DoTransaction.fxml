@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="353.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ethereum.DoTransactionController">
+   <children>
+      <ImageView fitHeight="472.0" fitWidth="582.0" layoutX="-3.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/back.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="aF" alignment="CENTER" layoutX="52.0" layoutY="46.0" prefHeight="25.0" prefWidth="472.0">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="bFF" alignment="CENTER" layoutX="52.0" layoutY="112.0" onKeyTyped="#echange22" prefHeight="25.0" prefWidth="437.0" text="5000000000000000000" />
+      <TextField fx:id="cF" alignment="CENTER" layoutX="52.0" layoutY="177.0" prefHeight="25.0" prefWidth="472.0" />
+      <Label layoutX="213.0" layoutY="14.0" text="Your Adresse" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="80.0" text="Your Bill" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="205.0" layoutY="145.0" text="You will pay to" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="230.0" layoutY="210.0" mnemonicParsing="false" onAction="#SendTransaction" prefHeight="42.0" prefWidth="116.0" text="Send Transaction" />
+      <Label layoutX="52.0" layoutY="88.0" text="At least 0.5 Eth " textFill="WHITE" />
+      <Label layoutX="52.0" layoutY="153.0" text="Smart Contract" textFill="WHITE" />
+      <Label fx:id="ss" layoutX="52.0" layoutY="22.0" text="Solde=100 eth" textFill="WHITE" />
+      <Label fx:id="resultatF" layoutX="247.0" layoutY="295.0" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="111.0" text="Wei" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="eth_label" layoutX="431.0" layoutY="88.0" prefHeight="17.0" prefWidth="78.0" text="=0.5 eth" textFill="WHITE" />
+      <TextArea fx:id="txtFFF" layoutX="54.0" layoutY="265.0" prefHeight="54.0" prefWidth="478.0" />
+      <Label layoutX="54.0" layoutY="244.0" text="Transaction Receipt" textFill="WHITE" />
+   </children>
+</AnchorPane>
